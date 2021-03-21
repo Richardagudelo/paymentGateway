@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4>Purchase OK!!</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')">
+
+    </button>
+</div>
+
+<div class="modal-body">
+    <h3>Items Data</h3>
+    <hr>
+    <div *ngFor="let item of items">
+        <!-- <p><b>Name: </b>{{item.name}} <b>Units: </b>{{item.quantity}} <b>Price/unit: </b>{{item.unit_amount.value}}{{item.unit_amount.currency_code}}</p> -->
+        <p><b>Name: </b>{{item.name}} <b>Units: </b>{{item.quantity}} <b>Price/unit: </b>{{item.unit_amount.value}} USD
+        </p>
+    </div>
+    <hr>
+    <h3><b>Total: </b>{{amount}}</h3>
+</div>
